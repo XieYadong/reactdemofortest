@@ -1,0 +1,21 @@
+$em-base: 100;
+@function rem($pxval) {
+  @if not unitless($pxval) {
+    $pxval: strip-units($pxval);
+  }
+
+  $base: $em-base;
+  @if not unitless($base) {
+    $base: strip-units($base);
+  }
+  @return ($pxval / $base) * 1rem;
+}
+.app {
+  max-width: 7.5rem;
+  margin: 0 auto;
+}
+
+.formErr {
+  color: #ff4d4f;
+  font-size: rem(20);
+}

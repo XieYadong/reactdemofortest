@@ -1,0 +1,7 @@
+git:
+  requireCleanWorkingDir: false
+  tagName: 'release-v${version}'
+npm:
+  publish: false
+github:
+  release: false

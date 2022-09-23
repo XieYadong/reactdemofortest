@@ -1,0 +1,42 @@
+FROM node:12.18-alpine as build-stage
+
+WORKDIR /builder
+
+COPY . .
+
+# Disable Telemetry
+ENV NEXT_TELEMETRY_DISABLED=1
+
+
+
+# ENV PORTFOLIO_SERV_API_BASE_URI=https://api.staging.zfxfzb.com/portfolio
+# ENV NOTIFICATION_SERV_SOCKET_IO_URI=wss://api.staging.zfxfzb.com
+# ENV NOTIFICATION_SERV_SOCKET_IO_PATH=/portfolio/socket
+
+
+RUN yarn install
+
+RUN yarn build:pre
+
+RUN yarn install --production --ignore-scripts --prefer-offline
+
+FROM node:12.18-alpine as extract-stage
+
+WORKDIR /app
+
+COPY --from=build-stage /builder/package.json /builder/next.config.js ./
+COPY --from=build-stage /builder/build ./build
+COPY --from=build-stage /builder/public ./public
+COPY --from=build-stage /builder/node_modules ./node_modules
+
+
+# ENV PORTFOLIO_SERV_API_BASE_URI=https://api.staging.zfxfzb.com/portfolio
+# ENV NOTIFICATION_SERV_SOCKET_IO_URI=wss://api.staging.zfxfzb.com
+# ENV NOTIFICATION_SERV_SOCKET_IO_PATH=/portfolio/socket
+
+
+ENV PORT=3030
+
+EXPOSE 3030
+
+CMD [ "yarn", "build:dev" ]

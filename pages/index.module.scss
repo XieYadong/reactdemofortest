@@ -1,0 +1,44 @@
+.welcome {
+  width: 100%;
+  height: 100%;
+  background: #fff url(/images/welcome.png) no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+.welBox {
+  text-align: center;
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 23vh;
+  color: #c3272b;
+  font-weight: bold;
+  // font-style: oblique;
+}
+.imgBox {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.imgLeft {
+  width: 400px;
+  height: 400px;
+  background: transparent url(/images/man.png) no-repeat;
+  background-size: contain;
+
+  background-position: center center;
+  transform: rotateY(180deg); /* 水平镜像翻转 */
+  min-width: 200px;
+}
+.imgRight {
+  width: 400px;
+  height: 400px;
+  background: transparent url(/images/women.png) no-repeat;
+
+  background-size: contain;
+  background-position: center center;
+  min-width: 200px;
+}

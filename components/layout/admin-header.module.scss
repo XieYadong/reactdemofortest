@@ -1,0 +1,12 @@
+// @import "../../styles/variables.scss";
+
+.header {
+  background-color: #ffffff !important;
+  padding: 0 25px;
+  .userProfile {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding-right: 70px;
+  }
+}

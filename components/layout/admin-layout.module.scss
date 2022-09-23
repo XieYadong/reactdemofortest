@@ -1,0 +1,24 @@
+@import '../../styles/variables.scss';
+@import '../../styles/layout.scss';
+
+.sidebar {
+  // Make sidebar fixed at left side
+  // overflow: auto;
+  // height: 100vh;
+  // position: fixed;
+  // left: 0;
+
+  .logo {
+    text-indent: -1000em;
+    background: url('/images/logo.svg') no-repeat 50% 37%;
+    background-size: 100%;
+    // background-position: center center;
+    overflow: hidden;
+    // background-repeat: no-repeat;
+    color: $color-light-default;
+    height: $header-height;
+    width: 200px;
+    cursor: pointer;
+    background-color: #fff;
+  }
+}

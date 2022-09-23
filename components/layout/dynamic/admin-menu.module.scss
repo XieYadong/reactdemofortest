@@ -1,0 +1,9 @@
+.menu {
+  height: calc(100vh - 64px);
+  overflow: auto;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    width: 0 !important
+  }
+}

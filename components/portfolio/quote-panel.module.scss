@@ -1,0 +1,37 @@
+.clickable {
+  cursor: pointer;
+  &:hover{
+    border: 2px solid #ccc;
+    border-radius: 5px;
+  }
+}
+.buy {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ccc;
+
+  margin-bottom: 12px;
+}
+.fonttitle {
+  font-size: 26px;
+  font-weight: weight;
+}
+.center {
+  height: 100%;
+  line-height: 100%;
+}
+.centerText {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: 17px;
+}
+.clickable {
+  :global {
+    .ant-statistic-content {
+      font-size: 21px;
+    }
+    .ant-statistic-content-value-int {
+      font-size: 18px !important;
+    }
+  }
+}

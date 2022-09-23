@@ -1,0 +1,57 @@
+@import 'styles/mixin.module.scss';
+.inline {
+  width: 30% !important;
+  text-align: center;
+}
+.maxbox {
+  box-sizing: border-box;
+  padding: 0 0.3rem;
+  width: 100%;
+}
+
+.niutable {
+  font-size: rem(18);
+  color: #5a5a5a;
+  width: 100%;
+  table-layout: fixed;
+  padding-bottom: rem(20);
+  thead tr th {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    // min-height: rem(60) !important;
+    line-height: rem(60) !important;
+    font-size: rem(28);
+    padding: rem(10) 0;
+    font-weight: bold;
+    border: none;
+    .niutable thead tr th:first-child {
+      width: 10%;
+    }
+  }
+  tbody tr {
+    td {
+      text-align: center;
+      min-height: rem(40) !important;
+      line-height: rem(28);
+      font-size: rem(20);
+      border: none;
+      padding: rem(5) 0;
+    }
+    &:nth-of-type(2n + 1) {
+      // border-bottom-width: 1px;
+      background-color: #b2f5ea;
+    }
+  }
+}
+.empty {
+  text-align: center;
+  width: 100%;
+  font-size: rem(25);
+  color: rgba(0, 0, 0, 0.25);
+}
+// .niutable .niutable tbody tr td > div {
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+//   white-space: nowrap;
+// }

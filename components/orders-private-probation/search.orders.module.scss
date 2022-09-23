@@ -1,0 +1,46 @@
+@import '../../styles/variables.scss';
+
+.rise {
+  color: $color-rise;
+}
+
+.fall {
+  color: $color-fall;
+}
+
+.searchForm {
+  :global {
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+  }
+}
+.searchPosition {
+  :global {
+    .site-input-number-split {
+      border-radius: 0;
+      background-color: #fff;
+      .ant-input-number-input {
+        padding: 0 2px;
+      }
+    }
+    .site-input-number-right {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-left-width: 0;
+      &:hover,
+      &:focus {
+        border-left-width: 1px;
+      }
+    }
+    .site-input-number-left {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-right-width: 0;
+      &:hover,
+      &:focus {
+        border-right-width: 1px;
+      }
+    }
+  }
+}

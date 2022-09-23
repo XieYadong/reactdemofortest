@@ -1,0 +1,41 @@
+@import 'styles/variables.scss';
+
+@keyframes numIncreasing {
+  from {
+    background-color: transparent;
+  }
+
+  to {
+    background-color: $color-rise;
+  }
+}
+
+@keyframes numDecreasing {
+  from {
+    background-color: transparent;
+  }
+
+  to {
+    background-color: $color-fall;
+  }
+}
+
+.number-updatable {
+  background-color: transparent;
+
+  &.increasing,
+  &.decreasing {
+    animation-duration: 500ms;
+    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+
+  &.increasing {
+    // background-color: $color-rise;
+    animation-name: numIncreasing;
+  }
+
+  &.decreasing {
+    // background-color: $color-fall;
+    animation-name: numDecreasing;
+  }
+}

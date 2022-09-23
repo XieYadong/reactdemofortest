@@ -1,0 +1,41 @@
+@import '../../styles/variables.scss';
+
+.rise {
+  color: $color-rise;
+}
+
+.fall {
+  color: $color-fall;
+}
+
+.confirm {
+  width: 100%;
+  color: #d86471;
+  background-color: #f8eeef;
+  border: 1px solid #e8b8b6;
+  line-height: 30px;
+  font-size: 16px;
+  border-radius: 3px;
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+.area {
+  :global {
+    textarea.ant-input {
+      height: 260px;
+    }
+  }
+}
+.inputBox {
+  :global {
+    .ant-select-selection-search .ant-select-selection-search-input {
+      font-weight: bold;
+      color: red;
+    }
+  }
+}
+.textLable {
+  font-weight: bold;
+  color: red;
+}
